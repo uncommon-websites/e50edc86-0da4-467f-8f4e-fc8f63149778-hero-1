@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover TMS - Optimized Distribution Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Custom utility for the ultra-tight headline */
+        .tracking-ultra-tight {
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body class="font-sans text-[#0f0f0f] bg-white antialiased selection:bg-[#a5f3fc] selection:text-black overflow-x-hidden">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-[#a5f3fc] py-2.5 px-4 text-center text-[13px] font-medium animate-fade-in delay-0 flex justify-center items-center gap-2">
+        <span>Mover raises $80M from Khosla Ventures & Kleiner Perkins</span>
+        <span class="text-black/20 mx-1">|</span>
+        <a href="#" class="font-bold hover:underline inline-flex items-center">
+            Learn more 
+            <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <header class="w-full px-6 md:px-10 py-5 flex items-center justify-between max-w-[1440px] mx-auto animate-fade-in delay-0">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2H14C20.6274 2 26 7.37258 26 14C26 20.6274 20.6274 26 14 26H10V26H2V2Z" fill="#0f0f0f"/>
+                <path d="M10 14H14C15.6569 14 17 12.6569 17 11C17 9.34315 15.6569 8 14 8H10V14Z" fill="white"/>
+                <rect x="10" y="16" width="6" height="10" fill="white"/>
+            </svg>
+            <span class="text-[22px] font-bold tracking-tight">Mover</span>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-[11px] font-bold tracking-[0.1em] text-[#0f0f0f] uppercase ml-8">
+            <a href="#" class="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
+                Products 
+                <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <a href="#" class="hover:opacity-70 transition-opacity">Pricing</a>
+            <a href="#" class="hover:opacity-70 transition-opacity">Tour</a>
+            <a href="#" class="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
+                Company 
+                <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <a href="#" class="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
+                Resources 
+                <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+            <a href="#" class="hidden sm:block px-5 py-2.5 text-[13px] font-semibold border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 active:scale-97">
+                Log in
+            </a>
+            <a href="#" class="px-6 py-3 text-[13px] font-semibold bg-[#3b82f6] text-white rounded-lg hover:opacity-90 transition-colors duration-200 active:scale-[0.97]">
+                Get started
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-16 md:pt-24 pb-12 px-4 flex flex-col items-center text-center w-full max-w-[1200px] mx-auto">
+        
+        <!-- Headline -->
+        <h1 class="text-[60px] sm:text-[80px] md:text-[110px] lg:text-[130px] font-black uppercase tracking-ultra-tight leading-tight text-balance animate-fade-in-up delay-100 text-[#0f0f0f] w-full">
+            Digital TMS.<br>
+            From First Mile<br>
+            To Final Drop.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="mt-8 md:mt-12 text-[22px] md:text-[28px] font-bold text-[#4b5563] text-pretty leading-relaxed animate-fade-in-up delay-200 max-w-2xl mx-auto tracking-tight">
+            A digital-first TMS delivering optimized workflows, real-time visibility, and a 97% on-time performance guarantee.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto animate-fade-in-up delay-300">
+            <a href="#" class="flex items-center justify-between w-full sm:w-[200px] px-6 py-3 bg-[#3b82f6] text-white text-[15px] font-semibold rounded-lg hover:opacity-90 transition-colors duration-200 active:scale-[0.97]">
+                <span>Book a Demo</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="#" class="flex items-center justify-between w-full sm:w-[200px] px-6 py-3 bg-white text-[#4b5563] text-[15px] font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors duration-200 active:scale-[0.97]">
+                <span>See Mover TMS</span>
+                <svg class="w-5 h-5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- Hero Image Placeholder -->
+    <div class="px-4 md:px-8 w-full max-w-[1440px] mx-auto pb-24 animate-scale-in delay-400 mt-8 md:mt-12">
+        <div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+            <img 
+                src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/e50edc86-0da4-467f-8f4e-fc8f63149778/hero-1-img-0-1772135140974.png" 
+                alt="Mover Platform Interface" 
+                class="w-full h-full object-cover"
+            />
+            <!-- Simulated gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+            
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-20 h-14 bg-[#3b82f6]/90 rounded-xl flex items-center justify-center backdrop-blur-sm shadow-lg">
+                    <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
